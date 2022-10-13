@@ -6,7 +6,7 @@ from django.contrib.auth.views import (
     LogoutView as BaseLogoutView, PasswordChangeView as BasePasswordChangeView,
     PasswordResetDoneView as BasePasswordResetDoneView, PasswordResetConfirmView as BasePasswordResetConfirmView,
 )
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.crypto import get_random_string
 from django.utils.decorators import method_decorator
 from django.utils.http import is_safe_url
@@ -37,6 +37,10 @@ class GuestOnlyView(View):
             return redirect(settings.LOGIN_REDIRECT_URL)
 
         return super().dispatch(request, *args, **kwargs)
+
+
+def CalculatorView(request):
+    return render(request, 'accounts/calculator.html')
 
 
 class LogInView(GuestOnlyView, FormView):

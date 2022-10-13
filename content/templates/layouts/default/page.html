@@ -1,7 +1,6 @@
 {% load static %}
 {% load bootstrap4 %}
 {% load i18n %}
-
 {% get_current_language as language_code %}
 
 <!DOCTYPE html>
@@ -59,6 +58,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'accounts:sign_up' %}">{% trans 'Create an account' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'accounts:calculator' %}">{% trans 'Online Calculator' %}</a>
                     </li>
                 {% endif %}
             </ul>
