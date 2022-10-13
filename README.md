@@ -55,7 +55,7 @@ cd simple_django_login_and_register
 
 ```
 
-Install the dependencies needed to run the app:
+3. Install the dependencies needed to run the app:
 ```bash
   pip install Django==2.2
   pip install -r requirements. txt 
